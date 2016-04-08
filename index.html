@@ -78,18 +78,28 @@
     }
 
     .kim {
-      animation: work 6s alternate infinite;
+      animation: work 40s ease infinite;
       display: block;
       position: absolute;
       bottom: 0;
-      background: url('http://hi.jusv.co/assets/images/kim.png') no-repeat center bottom;
+      background-size: 100% auto;
+      width: 300px;
+      height: 420px;
+    }
+
+    .twerk {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url('/images/twerk.gif') no-repeat center bottom;
       background-size: 100% auto;
       width: 200px;
       height: 320px;
     }
 
     .lana {
-      background: url('http://hi.jusv.co/assets/images/lana.png') no-repeat center bottom;
+      background: url('/images/lana.png') no-repeat center bottom;
       background-size: 100% auto;
       max-width: 800px;
       height: 500px;
@@ -111,21 +121,33 @@
 
     @keyframes work {
       0%{
-        transform: translate(150px,0);
+        background: url('/images/kim.png') no-repeat center bottom;
       }
-      100% {
-        right: 0;
-        transform: translate(-150px,0);
+      30% {
+        background: none;
+      }
+      32% {
+        width: 500px;
+        background: url('/images/donna.gif') no-repeat center top;
+        transform: translate(150px,0);
       }
     }
   </style>
 </head>
 
 <body>
+  <audio autoplay preload="auto">
+    <source src="audio/lana.mp3" />
+  </audio>
+  <audio autoplay preload="auto">
+    <source src="audio/yas.mp3" />
+  </audio>
+
   <div class="wrapper">
     <div class="inner">
       <div class="fixed"><h1>Happy Birthday Puto</h1></div>
       <div class="kim"></div>
+      <div class="twerk"></div>
       <div class="lana"><img src="" alt="" /></div>
     </div>
   </div>
