@@ -78,13 +78,14 @@
     }
 
     .kim {
-      animation: work 40s ease infinite;
+      animation: work 6s infinite;
+      background: url('/images/kim.png') no-repeat center bottom;
       display: block;
       position: absolute;
       bottom: 0;
       background-size: 100% auto;
-      width: 300px;
-      height: 420px;
+      width: 200px;
+      height: 320px;
     }
 
     .twerk {
@@ -121,15 +122,10 @@
 
     @keyframes work {
       0%{
-        background: url('/images/kim.png') no-repeat center bottom;
-      }
-      30% {
-        background: none;
-      }
-      32% {
-        width: 500px;
-        background: url('/images/donna.gif') no-repeat center top;
         transform: translate(150px,0);
+      }
+      100% {
+        right: 0;
       }
     }
   </style>
@@ -139,7 +135,7 @@
   <div class="wrapper">
     <div class="inner">
       <div class="fixed"><h1><a href="https://www.youtube.com/watch?v=JVQMd5buCYk">Happy Birthday Puto</a></h1></div>
-      <div class="kim"></div>
+      <a href="/images/donna.gif"><div class="kim"></div></a>
       <div class="twerk"></div>
       <div class="lana"><img src="" alt="" /></div>
     </div>
